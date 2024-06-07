@@ -8,7 +8,7 @@ from sqlalchemy import create_engine
 # Data has been cloned from github to local using the command "git clone github_link"
 
 # aggregate_transactions
-path = "C:/Users/Incognito/Desktop/vscode/PHONEPE/pulse/data/aggregated/transaction/country/india/state/"
+path = "path"
 Agg_state_list = os.listdir(path)
 
 clm = {'State':[], 'Year':[],'Quarter':[],'Tran_type':[], 'Tran_count':[], 'Tran_amount':[]}
@@ -41,7 +41,7 @@ Tran_Agg = pd.DataFrame(clm)
 
 
 # aggregate_users
-path_1 = "C:/Users/Incognito/Desktop/vscode/PHONEPE/pulse/data/aggregated/user/country/india/state/"
+path_1 = "path"
 Agg_state_list = os.listdir(path_1)
 
 clm_1 = {'State':[], 'Year':[],'Quarter':[],'Registered_Users':[], 'App_Opened':[], 'Brand_Name':[],'Brand_Count':[],'Brand_Percentage':[]}
@@ -81,7 +81,7 @@ User_Agg = pd.DataFrame(clm_1)
 
 
 # map_transactions
-path_2 = "C:/Users/Incognito/Desktop/vscode/PHONEPE/pulse/data/map/transaction/hover/country/india/state/"
+path_2 = "path"
 Agg_state_list = os.listdir(path_2)
 
 clm_2 = {'State':[], 'Year':[],'Quarter':[],'District':[],'District_Tran_Count':[],'District_Tran_Amount':[]}
@@ -113,7 +113,7 @@ for i in Agg_state_list:
 Tran_Map = pd.DataFrame(clm_2)
 
 # map_users
-path_3 = "C:/Users/Incognito/Desktop/vscode/PHONEPE/pulse/data/map/user/hover/country/india/state/"
+path_3 = "path"
 Agg_state_list = os.listdir(path_3)
 
 clm_3={'State':[], 'Year':[],'Quarter':[],'District':[],'Registered_Users':[], 'App_Opened':[]}
@@ -146,7 +146,7 @@ User_Map = pd.DataFrame(clm_3)
 
 
 # top_transaction_states
-path_4 = "C:/Users/Incognito/Desktop/vscode/PHONEPE/pulse/data/top/transaction/country/india/"
+path_4 = "path"
 Agg_state_list = os.listdir(path_4)
 
 clm_4 = {'State':[], 'Year':[],'Quarter':[],'Tran_Amount':[],'Tran_Count':[]}
@@ -226,7 +226,7 @@ Tran_Top_Pincode = pd.DataFrame(clm_6)
 
 
 # top_user_state
-path_5 = "C:/Users/Incognito/Desktop/vscode/PHONEPE/pulse/data/top/user/country/india/"
+path_5 = "path"
 Agg_state_list = os.listdir(path_4)
 
 clm_7 = {'State':[], 'Year':[],'Quarter':[],'Registered_Users':[]}
@@ -332,9 +332,9 @@ User_Top_District["District"] = User_Top_District["District"].str.title()
 
 # Connect to the MySQL server
 mydb = mysql.connector.connect(
-  host = "127.0.0.1",
-  user = "root",
-  password = "1234",
+  host = "host",
+  user = "user",
+  password = "password",
   auth_plugin = "mysql_native_password"
 )
 
@@ -347,7 +347,7 @@ mycursor.close()
 mydb.close()
 
 # Connect to the newly created database
-engine = create_engine('mysql+mysqlconnector://root:1234@127.0.0.1/phonepe', echo=False)
+engine = create_engine('mysql+mysqlconnector://user:password@host/db', echo=False)
 
 # Insert the DataFrames datas to the SQL Database 
 
