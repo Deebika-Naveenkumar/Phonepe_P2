@@ -8,9 +8,9 @@ from PIL import Image
 # Function to execute SQL query and return DataFrame
 def execute_query(query):
     connection = pymysql.connect(
-        host='127.0.0.1',
-        user='root',
-        password='1234',
+        host='host',
+        user='user',
+        password='password',
         db='phonepe'
     )
     df = pd.read_sql(query, connection)
