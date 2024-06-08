@@ -10,7 +10,7 @@ BATCH: MDTM21
 
 DOMAIN : FinTech
 
-LINKEDIN : 
+LINKEDIN : https://www.linkedin.com/posts/activity-7205087604046753792-9gYb/?utm_source=share&utm_medium=member_desktop
 
 Lanuage & Tool used: Python, Streamlit, SQL, Pandas
 
